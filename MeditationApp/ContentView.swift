@@ -43,6 +43,14 @@ struct ContentView: View {
     }
     
     
+    var inProgressSectionView: some View {
+        HStack {
+            Text("In Progress")
+                .font(.custom("Avenir-Heavy", size: 18))
+            Spacer()
+        }
+    }
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(alignment: .leading, spacing: 10) {
@@ -52,6 +60,7 @@ struct ContentView: View {
                     .font(.custom("Avenir-Medium", size: 18))
                     .foregroundColor(Color(.systemGray))
                 searchView
+                inProgressSectionView
             }.padding(24)
         }
         .background(Color(.systemGroupedBackground).ignoresSafeArea() )

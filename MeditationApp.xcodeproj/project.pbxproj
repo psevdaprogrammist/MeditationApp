@@ -11,6 +11,8 @@
 		57C2C6A226240C9A001C95FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C2C6A126240C9A001C95FE /* ContentView.swift */; };
 		57C2C6A426240C9B001C95FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C2C6A326240C9B001C95FE /* Assets.xcassets */; };
 		57C2C6A726240C9B001C95FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C2C6A626240C9B001C95FE /* Preview Assets.xcassets */; };
+		57C2C6B0262455E4001C95FE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C2C6AF262455E4001C95FE /* CardView.swift */; };
+		57C2C6B426245601001C95FE /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C2C6B326245601001C95FE /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		57C2C6A326240C9B001C95FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57C2C6A626240C9B001C95FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		57C2C6A826240C9B001C95FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57C2C6AF262455E4001C95FE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		57C2C6B326245601001C95FE /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			children = (
 				57C2C69F26240C9A001C95FE /* MeditationAppApp.swift */,
 				57C2C6A126240C9A001C95FE /* ContentView.swift */,
+				57C2C6AF262455E4001C95FE /* CardView.swift */,
+				57C2C6B326245601001C95FE /* Card.swift */,
 				57C2C6A326240C9B001C95FE /* Assets.xcassets */,
 				57C2C6A826240C9B001C95FE /* Info.plist */,
 				57C2C6A526240C9B001C95FE /* Preview Content */,
@@ -139,7 +145,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				57C2C6A226240C9A001C95FE /* ContentView.swift in Sources */,
+				57C2C6B0262455E4001C95FE /* CardView.swift in Sources */,
 				57C2C6A026240C9A001C95FE /* MeditationAppApp.swift in Sources */,
+				57C2C6B426245601001C95FE /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
