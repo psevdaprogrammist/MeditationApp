@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Card {
+struct Card: Hashable {
     let iconName: String
     let title: String
     let subtitle: String

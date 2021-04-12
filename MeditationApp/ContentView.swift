@@ -11,6 +11,13 @@ struct ContentView: View {
     
     @State private var searchText = ""
     
+    let inProgressCard = Card .init(iconName: "moon", title: "The silent Night Vibes", subtitle: "2/4 Session Left", persentageComplete: 75)
+    
+    let recommendedCards : [Card] = [
+        .init(iconName: "face.smiling", title: "Happiness and Joyful", subtitle: "4 Session ", persentageComplete: nil),
+        .init(iconName: "heart", title: "Lovely and Vibes", subtitle: "5 Session ", persentageComplete: nil)
+    ]
+    
     init() {
         
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
@@ -42,12 +49,32 @@ struct ContentView: View {
         .padding(.horizontal, 20)
     }
     
-    
+    @ViewBuilder
     var inProgressSectionView: some View {
         HStack {
             Text("In Progress")
                 .font(.custom("Avenir-Heavy", size: 18))
             Spacer()
+        }
+        CardView(card: inProgressCard)
+    }
+    
+    @ViewBuilder
+    var recommendedSectionView: some View {
+        HStack {
+            Text("Recommended")
+                .font(.custom("Avenir-Heavy", size: 18))
+            Spacer()
+            Image(systemName: "arrow.right")
+                .foregroundColor(Color(.systemBlue))
+        }
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 16) {
+                ForEach(recommendedCards, id: \.self) { card in
+                    CardView(card: card)
+                        .frame(width: 200)
+                }
+            }
         }
     }
     
@@ -61,6 +88,7 @@ struct ContentView: View {
                     .foregroundColor(Color(.systemGray))
                 searchView
                 inProgressSectionView
+                recommendedSectionView
             }.padding(24)
         }
         .background(Color(.systemGroupedBackground).ignoresSafeArea() )

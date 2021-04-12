@@ -23,12 +23,12 @@ struct CardView: View {
                 Text(card.title)
                     .font(.custom("Avenir-Heavy", size: 22))
                 Text(card.subtitle)
-                    .font(.custom("Avenir-Medium", size: 18))
-                    .foregroundColor(Color(.systemGray))
+                    .modifier(CardDetailTextStyle())
                 
                 if let persentageText = card.percentageText {
                     HStack {
                         Text(persentageText)
+                            .modifier(CardDetailTextStyle())
                         Spacer()
                         ProgressView(value: card.persentageComplete, total: 100)
                             .progressViewStyle(MeditationProgressViewStyle())
@@ -37,6 +37,14 @@ struct CardView: View {
             }.padding()
         }
         
+    }
+}
+
+struct CardDetailTextStyle: ViewModifier {
+    func body(content: Content) -> some View {
+        return content
+            .font(.custom("Avenir-Medium", size: 18))
+            .foregroundColor(Color(.systemGray))
     }
 }
 
